@@ -4,6 +4,7 @@ import Library from './pages/Library'
 import Reader from './pages/Reader'
 import Profile from './pages/Profile'
 import Social from './pages/Social'
+import Settings from './pages/Settings'
 import type { Book } from './types'
 import { useAuthStore } from './stores/authStore'
 
@@ -48,36 +49,7 @@ function App(): JSX.Element {
         {currentPage === 'library' && (
           <Library onBookOpen={handleBookOpen} />
         )}
-        {currentPage === 'settings' && (
-          <div className="p-6">
-            <h1 className="text-2xl font-bold mb-4">Configurações</h1>
-            <div className="space-y-4">
-              <div className="p-4 bg-surface rounded-lg">
-                <h2 className="font-medium mb-2">Sobre</h2>
-                <p className="text-text-muted text-sm">
-                  Teju Jagua v0.2.0 - Seu launcher de livros pessoal
-                </p>
-              </div>
-              <div className="p-4 bg-surface rounded-lg">
-                <h2 className="font-medium mb-2">Armazenamento</h2>
-                <p className="text-text-muted text-sm">
-                  Os dados da biblioteca são salvos localmente. Dados sociais são sincronizados com o Firebase.
-                </p>
-              </div>
-              <div className="p-4 bg-surface rounded-lg">
-                <h2 className="font-medium mb-2">Configuração Firebase</h2>
-                <p className="text-text-muted text-sm mb-2">
-                  Para ativar os recursos sociais, configure as variáveis de ambiente:
-                </p>
-                <code className="block p-3 bg-background rounded text-xs">
-                  VITE_FIREBASE_API_KEY=...<br/>
-                  VITE_FIREBASE_AUTH_DOMAIN=...<br/>
-                  VITE_FIREBASE_PROJECT_ID=...
-                </code>
-              </div>
-            </div>
-          </div>
-        )}
+        {currentPage === 'settings' && <Settings />}
         {currentPage === 'social' && <Social />}
         {currentPage === 'profile' && <Profile />}
       </main>

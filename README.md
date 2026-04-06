@@ -107,7 +107,15 @@ src/
   - [x] Buscar usuários
   - [x] Solicitações de amizade
   - [x] Código de amigo único
-- [ ] Fase 4: Sync e Polimento
+- [x] Fase 4: Sync e Polimento
+  - [x] Sync de progresso com Firebase
+  - [x] Sync de destaques com Firebase
+  - [x] Hook useSync para gerenciamento
+  - [x] Internacionalização (pt-BR, en-US)
+  - [x] Indicador de sincronização na sidebar
+  - [x] Página de configurações completa
+  - [x] Auto-updater configurado
+  - [x] Atalhos de teclado documentados
 
 ## 🤝 Contribuindo
 
