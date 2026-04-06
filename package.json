@@ -19,6 +19,7 @@
     "electron-log": "^5.2.0",
     "electron-updater": "^6.3.0",
     "epubjs": "^0.3.93",
+    "firebase": "^11.0.0",
     "jszip": "^3.10.1",
     "uuid": "^11.0.3",
     "xml2js": "^0.6.2",

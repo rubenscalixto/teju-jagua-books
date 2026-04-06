@@ -97,7 +97,16 @@ src/
   - [x] Painel de lista de destaques
   - [x] Exportar destaques para Markdown
   - [x] Compartilhamento público/privado
-- [ ] Fase 3: Sistema Social (Firebase)
+- [x] Fase 3: Sistema Social (Firebase)
+  - [x] Setup Firebase (Auth + Firestore)
+  - [x] Login com Google
+  - [x] Login/Cadastro com Email
+  - [x] Perfil de usuário
+  - [x] Feed de atividade
+  - [x] Lista de amigos
+  - [x] Buscar usuários
+  - [x] Solicitações de amizade
+  - [x] Código de amigo único
 - [ ] Fase 4: Sync e Polimento
 
 ## 🤝 Contribuindo
