@@ -1,5 +1,6 @@
 import { app, shell, BrowserWindow, ipcMain, dialog } from 'electron'
 import { join } from 'path'
+import { readFile, readdir, stat } from 'fs/promises'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import log from 'electron-log'
 
@@ -20,7 +21,8 @@ function createWindow(): void {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: false,
       contextIsolation: true,
-      nodeIntegration: false
+      nodeIntegration: false,
+      webSecurity: false
     }
   })
 
@@ -58,6 +60,26 @@ app.whenReady().then(() => {
       ]
     })
     return result.filePaths
+  })
+
+  ipcMain.handle('file:read', async (_, filePath: string) => {
+    try {
+      const buffer = await readFile(filePath)
+      return buffer
+    } catch (err) {
+      log.error('Error reading file:', err)
+      return null
+    }
+  })
+
+  ipcMain.handle('file:readDir', async (_, dirPath: string) => {
+    try {
+      const entries = await readdir(dirPath)
+      return entries
+    } catch (err) {
+      log.error('Error reading directory:', err)
+      return []
+    }
   })
 
   createWindow()

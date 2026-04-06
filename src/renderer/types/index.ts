@@ -1,5 +1,7 @@
 export interface ElectronAPI {
   openFileDialog: () => Promise<string[]>
+  readFile: (filePath: string) => Promise<Buffer | null>
+  readDir: (dirPath: string) => Promise<string[]>
 }
 
 declare global {
