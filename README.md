@@ -78,7 +78,7 @@ src/
 ## 📝 Roadmap
 
 - [x] Setup inicial do projeto
-- [x] Fase 1: MVP - Biblioteca + Leitor EPUB (em progresso)
+- [x] Fase 1: MVP - Biblioteca + Leitor EPUB
   - [x] Estrutura de navegação (Sidebar)
   - [x] Importação de EPUBs via file picker
   - [x] Drag & drop de arquivos EPUB
@@ -90,7 +90,13 @@ src/
   - [x] Índice/TOC interativo
   - [x] Salvamento de progresso automático
   - [x] Filtros de biblioteca (Todos/Lendo/Finalizados/Não iniciados)
-- [ ] Fase 2: Recursos de Leitura (destaques, bookmarks)
+- [x] Fase 2: Recursos de Leitura
+  - [x] Destaques com cores (4 opções)
+  - [x] Bookmarks/marcadores
+  - [x] Notas em destaques
+  - [x] Painel de lista de destaques
+  - [x] Exportar destaques para Markdown
+  - [x] Compartilhamento público/privado
 - [ ] Fase 3: Sistema Social (Firebase)
 - [ ] Fase 4: Sync e Polimento
 
